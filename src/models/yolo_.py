@@ -33,7 +33,6 @@ class YOLOModel(nn.Module):
         x = self.backbone(x)
         return x
 
-# Example usage:
-num_classes = 10  # Replace with the number of classes in your dataset
-model = YOLOModel(num_classes=num_classes, loss={"xent"}, pretrained=True)
-print(model)
+    def yoloMod(
+        model = YOLOModel(num_classes=num_classes, loss={"xent"}, pretrained=True)
+        print(model)
