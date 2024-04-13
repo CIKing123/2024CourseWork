@@ -33,6 +33,13 @@ class YOLOModel(nn.Module):
         x = self.backbone(x)
         return x
 
-    def yoloMod(
-        model = YOLOModel(num_classes=num_classes, loss={"xent"}, pretrained=True)
-        print(model)
+    
+    def yolo1(num_classes, loss={"xent"}, pretrained=True, **kwargs):
+    model = YOLOModel(
+        "yolo",
+        num_classes=num_classes,
+        loss=loss,
+        pretrained=pretrained,
+        **kwargs,
+    )
+    return model
