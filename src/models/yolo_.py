@@ -34,7 +34,7 @@ class YOLOModel(nn.Module):
         return x
 
     
-    def yolo1(num_classes, loss={"xent"}, pretrained=True, **kwargs):
+    def yolo(num_classes, loss={"xent"}, pretrained=True, **kwargs):
     model = YOLOModel(
         "yolo",
         num_classes=num_classes,
